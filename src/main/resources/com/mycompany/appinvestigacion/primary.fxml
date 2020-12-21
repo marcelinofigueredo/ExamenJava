@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="386.0" prefWidth="651.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.appinvestigacion.PrimaryController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <AnchorPane prefHeight="346.0" prefWidth="540.0">
+         <children>
+            <TextField fx:id="txfId" layoutY="38.0" prefHeight="28.0" prefWidth="197.0" />
+            <TextField fx:id="txfDescripcion" layoutY="129.0" prefHeight="28.0" prefWidth="197.0" />
+            <Button layoutY="177.0" mnemonicParsing="false" onAction="#onActionRegistrar" prefHeight="28.0" prefWidth="78.0" text="Registrar" />
+            <Label layoutX="6.0" layoutY="5.0" text="Codigo" />
+            <Label layoutY="94.0" text="Descripcion" />
+            <Button layoutX="132.0" layoutY="177.0" mnemonicParsing="false" onAction="#onActionEditar" prefHeight="28.0" prefWidth="65.0" text="Editar" />
+            <Button layoutX="132.0" layoutY="223.0" mnemonicParsing="false" onAction="#onActionLimpiar" prefHeight="28.0" prefWidth="65.0" text="Limpiar" />
+            <TableView fx:id="tblDatos" layoutX="209.0" layoutY="5.0" prefHeight="320.0" prefWidth="296.0">
+              <columns>
+                <TableColumn fx:id="colCodigo" prefWidth="129.0" text="Codigo" />
+                <TableColumn fx:id="colDescripcion" prefWidth="166.0" text="Descripcion" />
+              </columns>
+            </TableView>
+            <Button layoutY="223.0" mnemonicParsing="false" onAction="#onActionEliminar" prefHeight="28.0" prefWidth="78.0" text="Eliminar" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
